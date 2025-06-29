@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Monstr</title>
-    <!-- <script src='js/index.js'></script> -->
-    <script src='js/demo.js'></script>
+    <script defer src="js/index.js"></script>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+      }
+      .monster {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px 0;
+      }
+      #monster-form input,
+      #monster-form button {
+        margin: 5px;
+      }
+    </style>
   </head>
   <body>
     <h1>Monstr Inc.</h1>
-    <div id='create-monster'></div>
-    <div id='monster-container'></div>
+
+    <div id="create-monster">
+      <h2>Create New Monster</h2>
+      <form id="monster-form">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="number" id="age" placeholder="Age" step="0.1" required />
+        <input
+          type="text"
+          id="description"
+          placeholder="Description"
+          required
+        />
+        <button type="submit">Create</button>
+      </form>
+    </div>
+
+    <h2>Monster List</h2>
+    <div id="monster-container"></div>
     <button id="back"><=</button>
     <button id="forward">=></button>
   </body>
